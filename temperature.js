@@ -9,3 +9,15 @@ function Medida(valor, tipo){
  }
 
  Temperatura.prototype = new Medida();
+
+ Medida.prototype.get_valor = function(){ return this.valor_; }
+
+ Medida.prototype.get_tipo = function(){ return this.tipo_; }
+
+ Medida.prototype.set_valor = function(valor){ this.valor_=valor; }
+
+ Medida.prototype.set_tipo = function(tipo){ this.tipo_=tipo; }
+
+ Temperatura.prototype.pasar_a_f = function(){ return (this.get_valor()*9/5)+32; }
+
+ Temperatura.prototype.pasar_a_c = function(){ return (this.get_valor()-32)*5/9; }
