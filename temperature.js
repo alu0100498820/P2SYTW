@@ -23,20 +23,31 @@ function Medida(valor, tipo){
  Temperatura.prototype.pasar_a_c = function(){ return (this.get_valor()-32)*5/9; }
 
  function convertir(){
-   var result=new Temperatura();
-   var temp=original.value;
+     var result=new Temperatura();
+     var temp=original.value;
 
-   if(temp){
-     var regexp = /([-+]?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*([fFcC])/;
-     var valor = temp.match(regexp);
+     if(temp){
+       var regexp = /([-+]?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*([fFcC])/;
+       var valor = temp.match(regexp);
 
-     if(valor){
-       var temp_=new Temperatura();
+       if(valor){
+         var temp_=new Temperatura();
 
-       temp_.set_valor(parseFloat(valor[1]));
-       temp_.set_tipo(valor[2]);
-    } else {
-        converted.innerHTML = "ERROR! Pruebe algo como esto '-4.2C' o '-4.2e15C'";
+         temp_.set_valor(parseFloat(valor[1]));
+         temp_.set_tipo(valor[2]);
+
+         if (temp_.get_tipo() == 'c' || temp_.get_tipo() == 'C') {
+           result.set_valor(temp_.pasar_a_f());
+           result.set_tipo("Fahrenheit");
+         }else {
+           result.set_valor(temp_.pasar_a_c());
+           result.set_tipo("Celsius");
+         }
+         result = result.get_valor() + " " + result.get_tipo();
+         converted.innerHTML = result;
+       }
+       else {
+         converted.innerHTML = "ERROR! Pruebe algo como esto '-4.2C' o '-4.2e15C'";
+       }
      }
-  }
- }
+   }
