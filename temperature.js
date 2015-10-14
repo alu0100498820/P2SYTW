@@ -21,3 +21,12 @@ function Medida(valor, tipo){
  Temperatura.prototype.pasar_a_f = function(){ return (this.get_valor()*9/5)+32; }
 
  Temperatura.prototype.pasar_a_c = function(){ return (this.get_valor()-32)*5/9; }
+
+ function convertir(){
+     var result=new Temperatura();
+     var temp=original.value;
+
+     var regexp = /([-+]?\d+(?:\.\d+)?(?:[eE][+-]?)\d+)?)\s*([fFcC])/;
+     var valor = temp.match(regexp);
+     
+   }
