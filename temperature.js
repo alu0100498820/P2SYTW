@@ -23,10 +23,20 @@ function Medida(valor, tipo){
  Temperatura.prototype.pasar_a_c = function(){ return (this.get_valor()-32)*5/9; }
 
  function convertir(){
-     var result=new Temperatura();
-     var temp=original.value;
+   var result=new Temperatura();
+   var temp=original.value;
 
-     var regexp = /([-+]?\d+(?:\.\d+)?(?:[eE][+-]?)\d+)?)\s*([fFcC])/;
+   if(temp){
+     var regexp = /([-+]?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*([fFcC])/;
      var valor = temp.match(regexp);
-     
-   }
+
+     if(valor){
+       var temp_=new Temperatura();
+
+       temp_.set_valor(parseFloat(valor[1]));
+       temp_.set_tipo(valor[2]);
+    } else {
+        converted.innerHTML = "ERROR! Pruebe algo como esto '-4.2C' o '-4.2e15C'";
+     }
+  }
+ }
