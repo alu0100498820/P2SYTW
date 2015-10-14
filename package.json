@@ -4,7 +4,7 @@
   "description": "Grado de Ingenieria Informatica. SYTW. Practica:Temperature Converter2",
   "main": "temperature.js",
   "scripts": {
-    "test": "open tests/index.html"
+    "test": "node static-server"
   },
   "repository": {
     "type": "git",
