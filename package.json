@@ -1,0 +1,22 @@
+{
+  "name": "temperature-converter2",
+  "version": "1.0.0",
+  "description": "Grado de Ingenieria Informatica. SYTW. Practica:Temperature Converter2",
+  "main": "temperature.js",
+  "scripts": {
+    "test": "open tests/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alu0100498820/P2SYTW.git"
+  },
+  "keywords": [
+    "regexp"
+  ],
+  "author": "Borja Barrera Villagrasa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alu0100498820/P2SYTW/issues"
+  },
+  "homepage": "https://github.com/alu0100498820/P2SYTW#readme"
+}
