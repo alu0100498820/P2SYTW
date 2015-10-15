@@ -32,4 +32,10 @@
 
 > *Ejecución de Pruebas*
 
-  * http://alu0100498820.github.io/P2SYTW/tests/test_blanket.html/
+  * http://alu0100498820.github.io/P2SYTW/tests/index.html
+
+
+
+> *Ejecución de Pruebas (Blanket)*
+
+  * http://alu0100498820.github.io/P2SYTW/tests/test_blanket.html
