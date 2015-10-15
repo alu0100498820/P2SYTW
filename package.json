@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Grado de Ingenieria Informatica. SYTW. Practica:Temperature Converter2",
   "main": "temperature.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "test": "node static-server"
   },
