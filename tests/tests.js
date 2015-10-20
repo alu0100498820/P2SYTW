@@ -39,4 +39,17 @@ describe("__ TEST BDD __", function() {
     var result = temp.pasar_a_c();
     expect(result).to.equal(0);
   });
+
+  it("convertir 1", function() {
+        original.value = "45C";
+        calculate()
+        expect(converted.innerHTML).to.equal("113 F");
+    });
+
+    it("convertir 2", function() {
+            original.value = "32F";
+            calculate()
+            expect(converted.innerHTML).to.equal("0 C");
+        });
+
 });
