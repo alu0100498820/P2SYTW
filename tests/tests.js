@@ -43,13 +43,13 @@ describe("__ TEST BDD __", function() {
   it("convertir 1", function() {
         original.value = "45C";
         convertir()
-        expect(converted.innerHTML).to.equal("113 F");
+        expect(converted.innerHTML).to.equal("113 Fahrenheit");
     });
 
     it("convertir 2", function() {
             original.value = "32F";
             convertir()
-            expect(converted.innerHTML).to.equal("0 C");
+            expect(converted.innerHTML).to.equal("0 Celsius");
         });
 
 });
