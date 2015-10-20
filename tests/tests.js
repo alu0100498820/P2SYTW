@@ -51,5 +51,10 @@ describe("__ TEST BDD __", function() {
             convertir()
             expect(converted.innerHTML).to.equal("0 Celsius");
         });
+        it('Hola = error', function() {
+            original.value = "Hola";
+            convertir()
+            expect(converted.innerHTML).to.equal('ERROR! Prueba con algo como esto \'-4.2C\' ', /ERROR/);
+        });
 
 });
