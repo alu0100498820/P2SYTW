@@ -54,7 +54,7 @@ describe("__ TEST BDD __", function() {
         it('Hola = error', function() {
             original.value = "Hola";
             convertir()
-            expect(converted.innerHTML).to.equal('ERROR! Pruebe algo como esto \'-4.2C\' o \'-4.2e15C\' ', /ERROR/);
+            expect(converted.innerHTML).to.equal('ERROR! Pruebe algo como esto \'-4.2C\' o \'-4.2e15C\'', /ERROR/);
         });
 
 });
